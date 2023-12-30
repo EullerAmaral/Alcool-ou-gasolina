@@ -1,10 +1,3 @@
-//
-//  CalculatorVC.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 21/03/23.
-//
-
 import UIKit
 
 class CalculatorVC: UIViewController {
@@ -42,9 +35,7 @@ class CalculatorVC: UIViewController {
         }
         return true
     }
-    
 }
-
 
 extension CalculatorVC: CalculatorScreenDelegate {
     func tappedCalculateButton() {
@@ -53,8 +44,8 @@ extension CalculatorVC: CalculatorScreenDelegate {
             let formatter = NumberFormatter()
             formatter.numberStyle = .decimal
 
-            let ethanolPrice: Double = (formatter.number(from: screen?.ethanolPriceTextField.text ?? "0.0")                              as? Double) ?? 0.0
-            let gasPrice: Double = (formatter.number(from: screen?.gasPriceTextField.text ?? "0.0")                                    as? Double) ?? 0.0
+            let ethanolPrice: Double = (formatter.number(from: screen?.ethanolPriceTextField.text ?? "0.0") as? Double) ?? 0.0
+            let gasPrice: Double = (formatter.number(from: screen?.gasPriceTextField.text ?? "0.0") as? Double) ?? 0.0
 
             var vc: ResultVC?
 
@@ -67,11 +58,9 @@ extension CalculatorVC: CalculatorScreenDelegate {
             }
             navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
         }
-        
     }
     
     func tappedBackButton() {
         navigationController?.popViewController(animated: true)
     }
-    
 }

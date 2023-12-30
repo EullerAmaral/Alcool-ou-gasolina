@@ -1,10 +1,3 @@
-//
-//  HomeScreen.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 19/03/23.
-//
-
 import UIKit
 
 protocol HomeScreenDelegate: AnyObject {
@@ -50,7 +43,6 @@ class HomeScreen: UIView {
     
     @objc func tappedStartButton() {
         self.delegate?.tappedStartButton()
-        
     }
     
     override init(frame: CGRect) {
@@ -83,5 +75,4 @@ class HomeScreen: UIView {
             startButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
-    
 }

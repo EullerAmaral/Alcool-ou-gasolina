@@ -1,10 +1,3 @@
-//
-//  ResultVC.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 22/03/23.
-//
-
 import UIKit
 
 enum bestFuel: String {

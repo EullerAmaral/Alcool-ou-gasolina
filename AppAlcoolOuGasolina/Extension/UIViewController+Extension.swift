@@ -1,11 +1,3 @@
-//
-//  UIViewController+Extension.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 25/03/23.
-//
-
-import Foundation
 import UIKit
 
 extension UIViewController {

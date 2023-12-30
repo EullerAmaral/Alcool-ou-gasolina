@@ -1,10 +1,3 @@
-//
-//  HomeVC.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 19/03/23.
-//
-
 import UIKit
 
 class HomeVC: UIViewController {
@@ -24,7 +17,6 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
     }
-
 }
 
 extension HomeVC: HomeScreenDelegate {
@@ -32,5 +24,4 @@ extension HomeVC: HomeScreenDelegate {
         let vc = CalculatorVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

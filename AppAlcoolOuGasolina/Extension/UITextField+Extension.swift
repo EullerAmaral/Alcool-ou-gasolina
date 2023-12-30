@@ -1,11 +1,3 @@
-//
-//  UITextField+Extension.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 25/03/23.
-//
-
-import Foundation
 import UIKit
 
 extension UITextField {
@@ -26,5 +18,4 @@ extension UITextField {
     @objc func doneButtonAction(){
         self.resignFirstResponder()
     }
-    
 }

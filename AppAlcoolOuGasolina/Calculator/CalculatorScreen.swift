@@ -1,10 +1,3 @@
-//
-//  CalculatorScreen.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 21/03/23.
-//
-
 import UIKit
 
 protocol CalculatorScreenDelegate: AnyObject {
@@ -37,29 +30,29 @@ class CalculatorScreen: UIView {
     }()
     
     lazy var ethanolPriceTextField: UITextField = {
-        let tf = UITextField()
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.autocorrectionType = .no // corrigir o texto automaticamente ao digitar? Sim ou não
-        tf.backgroundColor = .white
-        tf.borderStyle = .roundedRect
-        tf.keyboardType = .decimalPad
-        tf.placeholder = "Preço do Álcool"
-        tf.textColor = .darkGray
-        tf.addDoneButtonOnKeyboard()
-        return tf
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .decimalPad
+        textField.placeholder = "Preço do Álcool"
+        textField.textColor = .darkGray
+        textField.addDoneButtonOnKeyboard()
+        return textField
     }()
     
     lazy var gasPriceTextField: UITextField = {
-        let tf = UITextField()
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.autocorrectionType = .no // corrigir o texto automaticamente ao digitar? Sim ou não
-        tf.backgroundColor = .white
-        tf.borderStyle = .roundedRect
-        tf.keyboardType = .decimalPad
-        tf.placeholder = "Preço da Gasolina"
-        tf.textColor = .darkGray
-        tf.addDoneButtonOnKeyboard()
-        return tf
+        let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocorrectionType = .no // corrigir o texto automaticamente ao digitar? Sim ou não
+        textField.backgroundColor = .white
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .decimalPad
+        textField.placeholder = "Preço da Gasolina"
+        textField.textColor = .darkGray
+        textField.addDoneButtonOnKeyboard()
+        return textField
     }()
     
     lazy var calculateButton: UIButton = {
@@ -77,7 +70,6 @@ class CalculatorScreen: UIView {
     
     @objc func tappedCalculateButton(){
         delegate?.tappedCalculateButton()
-        
     }
     
     lazy var backButton: UIButton = {
@@ -86,7 +78,6 @@ class CalculatorScreen: UIView {
         button.setBackgroundImage(UIImage(systemName: "chevron.backward.circle"), for: .normal)
         button.tintColor = .white
         button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
-
         return button
     }()
     
@@ -103,7 +94,6 @@ class CalculatorScreen: UIView {
         addSubview(calculateButton)
         addSubview(backButton)
         configConstraints()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -138,9 +128,6 @@ class CalculatorScreen: UIView {
             calculateButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 60),
             calculateButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
             calculateButton.heightAnchor.constraint(equalToConstant: 44)
-            
-            
         ])
     }
-    
 }

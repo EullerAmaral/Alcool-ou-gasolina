@@ -1,10 +1,3 @@
-//
-//  ResultScreen.swift
-//  AppAlcoolOuGasolina
-//
-//  Created by Iphone on 22/03/23.
-//
-
 import UIKit
 
 protocol ResultScreenDelegate: AnyObject {
